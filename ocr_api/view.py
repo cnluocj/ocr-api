@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 import json
+from django.views.decorators.csrf import csrf_exempt
+
 
 try:
     import Image
@@ -19,6 +21,7 @@ def index(request):
 #     return render_to_response('index.html', {}, context_instance=RequestContext(request))
 
 
+@csrf_exempt
 def upload(request):
     img = request.FILES['image']
 
