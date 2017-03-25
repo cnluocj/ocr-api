@@ -29,8 +29,8 @@ def upload(request):
         img_buf = StringIO.StringIO(img.read())
         result = pytesseract.image_to_string(Image.open(img_buf), 'chi_sim')
         data = {'is_success': 1, 'result': result}
-        return HttpResponse(json.dump(data), content_type='application/json')
+        return HttpResponse(json.dumps(data), content_type='application/json')
 
     else:
         data = {'is_success': 0}
-        return HttpResponse(json.dump(data), content_type='application/json')
+        return HttpResponse(json.dumps(data), content_type='application/json')
