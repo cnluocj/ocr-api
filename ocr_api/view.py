@@ -17,8 +17,8 @@ import StringIO
 
 
 def index(request):
-    return HttpResponse('hello world !')
-#     return render_to_response('index.html', {}, context_instance=RequestContext(request))
+    # return HttpResponse('hello world !')
+    return render_to_response('index.html', {}, context_instance=RequestContext(request))
 
 
 @csrf_exempt
