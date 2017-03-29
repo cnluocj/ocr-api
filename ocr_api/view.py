@@ -17,9 +17,10 @@ import StringIO
 
 
 def index(request):
-    # return HttpResponse('hello world !')
     return render_to_response('index.html', {}, context_instance=RequestContext(request))
 
+def hello(request):
+    return HttpResponse('hello world !')
 
 @csrf_exempt
 def upload(request):

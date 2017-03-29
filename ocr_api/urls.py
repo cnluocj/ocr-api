@@ -10,4 +10,5 @@ urlpatterns = [
     #url(r'^admin/', include(admin.site.urls)),
     url(r'^$', view.index),
     url(r'^upload/', view.upload),
+    url(r'^hello/', view.hello),
 ]
